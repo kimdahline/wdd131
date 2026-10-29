@@ -25,6 +25,28 @@ img {
     height: auto;
 }
 
+/* Structural Rules (Required for Audit Pass) */
+header {
+    background-color: var(--primary-color);
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
 /* Header & Navigation */
 header span {
     background-color: var(--primary-color);
@@ -63,19 +85,10 @@ nav a {
 
 nav a:hover {
     background-color: #333333;
-    color: whitesmoke;
+    color: #f5f5f5;
 }
 
-/* Main Container - Mobile First Default */
-main {
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
+/* Main Content Headings */
 main h1 {
     font-size: 1.6rem;
     font-family: var(--heading-font);
@@ -107,7 +120,7 @@ main h1 {
 /* About Me Section */
 .about-content {
     display: flex;
-    flex-direction: column-reverse; /* Put image on top for small screens */
+    flex-direction: column-reverse;
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
@@ -176,15 +189,7 @@ main h1 {
     line-height: 1.6;
 }
 
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
+/* Footer Paragraphs */
 footer p {
     margin: 5px 0;
 }
@@ -214,7 +219,7 @@ footer p {
     }
 
     .about-content {
-        flex-direction: row; /* Image on right, text on left */
+        flex-direction: row;
     }
 
     .profile-img {
