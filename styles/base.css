@@ -1,0 +1,239 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #8b0000;
+    --secondary-color: #000000;
+    --accent-color: #ffffff;
+    --font-family: "Roboto", sans-serif;
+    --heading-font: "DM Sans", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header & Navigation */
+header span {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    display: block;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 10px;
+}
+
+/* Navigation - Mobile First Default */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #333333;
+    color: whitesmoke;
+}
+
+/* Main Container - Mobile First Default */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+main h1 {
+    font-size: 1.6rem;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    background: var(--accent-color);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    font-family: var(--heading-font);
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 10px;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+/* About Me Section */
+.about-content {
+    display: flex;
+    flex-direction: column-reverse; /* Put image on top for small screens */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Hero / Uganda Section */
+.hero {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.hero h3 {
+    font-size: 1.2rem;
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.uganda-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    justify-items: center;
+}
+
+.flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flag-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 8px;
+    line-height: 1.2;
+}
+
+.uganda-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ==========================================================================
+   Larger Devices & Desktops (min-width: 768px)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    header span {
+        font-size: 1.25rem;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    main {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    main h1 {
+        font-size: 2rem;
+        grid-column: 1 / -1;
+    }
+
+    .about-content {
+        flex-direction: row; /* Image on right, text on left */
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .hero h3 {
+        font-size: 1.3rem;
+    }
+
+    .uganda-grid {
+        grid-template-columns: 130px 1fr;
+        justify-items: start;
+        align-items: start;
+    }
+
+    .flag-img {
+        width: 110px;
+        height: 110px;
+    }
+}
