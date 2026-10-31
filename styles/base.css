@@ -189,6 +189,24 @@ main h1 {
     line-height: 1.6;
 }
 
+/* Web Dev Resources List Styling */
+.resource-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resource-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
 /* Footer Paragraphs */
 footer p {
     margin: 5px 0;
