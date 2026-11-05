@@ -1,11 +1,30 @@
 const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
-const list = document.querySelector('#list'); // Use the actual selector from your <ul>
+const list = document.querySelector('#list');
 
-const li = document.createElement('li');
-const deleteButton = document.createElement('button');
+button.addEventListener('click', function () {
+  const chapter = input.value.trim();
 
-li.textContent = input.value;
-deleteButton.textContent = '❌';
-li.append(deleteButton);
-list.append(li);
+  if (chapter === '') {
+    input.focus();
+    return;
+  }
+
+  const li = document.createElement('li');
+  const deleteButton = document.createElement('button');
+
+  li.textContent = chapter;
+  deleteButton.textContent = '❌';
+  deleteButton.setAttribute('aria-label', `Delete ${chapter}`);
+
+  li.append(deleteButton);
+  list.append(li);
+
+  deleteButton.addEventListener('click', function () {
+    list.removeChild(li);
+    input.focus();
+  });
+
+  input.value = '';
+  input.focus();
+});
