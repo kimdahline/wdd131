@@ -16,12 +16,8 @@
         gap: 1.5rem;
     }
 
-    .navigation li {
-        margin: 0;
-    }
-
-    /* Switch main content layout from 1 column to a multi-column grid */
-    main {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Switch main content grid to multi-column */
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
