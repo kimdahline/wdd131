@@ -3,73 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
+    <title>Temple Album - WDD 131</title>
+    <meta name="description" content="Explore a responsive album of sacred temples worldwide featuring clean design and structured layouts, built for WDD 131 Dynamic Web Fundamentals by Dahline Kimbugwe.">
+    <meta name="author" content="Dahline Kimbugwe">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
+    
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <!-- JavaScript -->
+    
+    <!-- External JavaScript -->
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Temple Album</h1>
-        <a id="menu" href="#"></a>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <span class="brand-title">Temple Album</span>
+            <a id="menu" href="#" aria-label="Menu"></a>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Old</a>
+                <a href="#">New</a>
+                <a href="#">Large</a>
+                <a href="#">Small</a>
+            </nav>
+        </div>
     </header>
 
     <main>
         <h1>Home</h1>
-        <figure>
-            <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City">
-            <figcaption>Salt Lake Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-of-christ.jfif" alt="Temple of Christ">
-            <figcaption>Temple of Christ</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus">
-            <figcaption>Temple of Jesus</figcaption>
-        </figure>
-        <figure>
-            <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City">
-            <figcaption>Salt Lake Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-of-christ.jfif" alt="Temple of Christ">
-            <figcaption>Temple of Christ</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus">
-            <figcaption>Temple of Jesus</figcaption>
-        </figure>
-        <figure>
-            <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City">
-            <figcaption>Salt Lake Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-of-christ.jfif" alt="Temple of Christ">
-            <figcaption>Temple of Christ</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus">
-            <figcaption>Temple of Jesus</figcaption>
-        </figure>
+        <div class="res-grid">
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-christ.jfif" alt="Temple of Christ">
+                <figcaption>Temple of Christ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus">
+                <figcaption>Temple of Jesus</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-christ.jfif" alt="Temple of Christ">
+                <figcaption>Temple of Christ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus">
+                <figcaption>Temple of Jesus</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-christ.jfif" alt="Temple of Christ">
+                <figcaption>Temple of Christ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus">
+                <figcaption>Temple of Jesus</figcaption>
+            </figure>
+        </div>
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> Dahline Kimbugwe, Uganda</p>
+        <p>&copy; <span id="currentyear">2026</span> | Dahline Kimbugwe | Uganda</p>
         <p id="lastModified"></p>
     </footer>
 </body>

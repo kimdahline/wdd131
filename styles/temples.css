@@ -1,31 +1,24 @@
-/* 1. Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* 2. Custom Properties (Variables) */
 :root {
     --primary-color: #334155;
     --secondary-color: #ffffff;
     --accent-color: #38bdf8;
-    --bg-color: #f8fafc;
     --text-color: #1e293b;
-    --font-family: 'Roboto', sans-serif;
-    --font-size: 16px;
-    --heading-font-size: 24px;
+    --bg-color: #f8fafc;
 }
 
-/* 3. Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* 4. Header & Navigation (Mobile) */
 header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -36,100 +29,101 @@ header {
     position: relative;
 }
 
-header h1 {
-    font-size: var(--heading-font-size);
-    color: var(--secondary-color);
+.brand-title {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-/* Hamburger Button */
-#menu {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: var(--secondary-color);
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-}
-
-/* Navigation Menu (Hidden by default on mobile) */
-.navigation {
-    display: none;
+/* Navigation & Flexbox requirement */
+nav.navigation {
+    display: flex;
     flex-direction: column;
+    display: none; /* toggled via JS on mobile */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--primary-color);
-    padding: 1rem 0;
-    list-style-type: none;
-    margin: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
 }
 
-/* Toggled state via JavaScript */
-.navigation.open {
+nav.navigation.open {
     display: flex;
 }
 
-.navigation li {
-    text-align: center;
-    margin: 0.5rem 0;
-}
-
 nav a {
-    text-decoration: none;
     color: var(--secondary-color);
-    display: block;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    transition: background 0.3s ease;
 }
 
 nav a:hover {
     color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 5. Main Content Layout (Mobile: 1 Column) */
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+/* Main Content Grid */
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    color: var(--primary-color);
+    text-align: center;
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+}
+
+.res-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-main h1 {
-    font-size: 20px;
+main figure {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     text-align: center;
-    grid-column: 1 / -1;
+    padding-bottom: 1rem;
+}
+
+main figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+main figcaption {
+    font-weight: 700;
+    margin-top: 0.75rem;
     color: var(--primary-color);
 }
 
-/* Temple Cards / Figures */
-main figure {
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-main img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-}
-
-/* 6. Footer Styles */
 footer {
-    text-align: center;
-    padding: 1.5rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem;
     margin-top: 2rem;
 }
