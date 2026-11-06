@@ -1,0 +1,27 @@
+/* Large View Styles (Tablets and Desktops) */
+@media screen and (min-width: 768px) {
+    /* Hide the hamburger button on large screens */
+    #menu {
+        display: none;
+    }
+
+    /* Force navigation list to always display horizontally */
+    .navigation {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+
+    /* Switch main content layout from 1 column to a multi-column grid */
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}

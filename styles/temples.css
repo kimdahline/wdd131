@@ -1,0 +1,135 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Custom Properties (Variables) */
+:root {
+    --primary-color: #334155;
+    --secondary-color: #ffffff;
+    --accent-color: #38bdf8;
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --font-family: 'Roboto', sans-serif;
+    --font-size: 16px;
+    --heading-font-size: 24px;
+}
+
+/* 3. Base Styles */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* 4. Header & Navigation (Mobile) */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: var(--heading-font-size);
+    color: var(--secondary-color);
+}
+
+/* Hamburger Button */
+#menu {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+/* Navigation Menu (Hidden by default on mobile) */
+.navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    list-style-type: none;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Toggled state via JavaScript */
+.navigation.open {
+    display: flex;
+}
+
+.navigation li {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: block;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* 5. Main Content Layout (Mobile: 1 Column) */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+main h1 {
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1 / -1;
+    color: var(--primary-color);
+}
+
+/* Temple Cards / Figures */
+main figure {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* 6. Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
