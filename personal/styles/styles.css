@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  color: #183044;
+  background: #f3f7fa;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem max(1rem, calc((100% - 68rem) / 2));
+  color: white;
+  background: #123b5d;
+}
+.site-name { color: inherit; font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+.menu-button {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-left: auto;
+  border: 1px solid #b9d7eb;
+  border-radius: .4rem;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+/* ::before is a pseudo-element: CSS adds this icon before the button's content. */
+.menu-button::before { content: "☰"; font-size: 1.5rem; }
+.menu-button[aria-expanded="true"]::before { content: "×"; font-size: 2rem; }
+.primary-nav { display: none; position: absolute; z-index: 1; top: 100%; left: 0; right: 0; padding: .5rem 1rem 1rem; background: #123b5d; }
+.primary-nav.open { display: grid; }
+.primary-nav a { padding: .75rem; border-radius: .25rem; color: white; text-decoration: none; }
+.primary-nav a:hover, .primary-nav a:focus-visible { background: #285d80; }
+.primary-nav a.active { color: #123b5d; background: #f5c451; font-weight: 700; }
+main { max-width: 68rem; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+section { margin-top: 2rem; padding: 1rem; border-left: .25rem solid #2679a8; background: white; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (min-width:  40rem) {
+  .menu-button { display: none; }
+  .primary-nav { position: static; display: flex; align-items: center; padding: 0; }
+}
+
