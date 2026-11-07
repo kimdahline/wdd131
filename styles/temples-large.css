@@ -1,23 +1,12 @@
-/* Large View Styles (Tablets and Desktops) */
-@media screen and (min-width: 768px) {
-    /* Hide the hamburger button on large screens */
-    #menu {
-        display: none;
-    }
-
-    /* Force navigation list to always display horizontally */
-    .navigation {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        background-color: transparent;
-        box-shadow: none;
-        padding: 0;
-        gap: 1.5rem;
-    }
-
-    /* Switch main content grid to multi-column */
-    .res-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* Larger screens: keep the menu horizontal and give the album a balanced grid. */
+@media (min-width: 700px) {
+  .header-inner { flex-wrap: nowrap; }
+  .menu-toggle { display: none; }
+  .primary-nav, .primary-nav.is-open { flex: 0 1 auto; display: flex; flex-direction: row; align-items: center; gap: .35rem; padding: 0; }
+  .primary-nav a { padding: .62rem .9rem; }
+  main { padding-top: 3.5rem; }
+  .temple-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+}
+@media (min-width: 1020px) {
+  .temple-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.7rem; }
 }
