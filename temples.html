@@ -1,14 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A responsive picture album featuring temples from around the world.">
-  <meta name="theme-color" content="#102a43">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple Album | WDD 131</title>
+  <meta name="description" content="Explore a responsive album of sacred temples worldwide, created by Dahline Kimbugwe for WDD 131.">
+  <meta name="author" content="Dahline Kimbugwe">
+  <meta name="theme-color" content="#102a43">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/temples.css">
   <link rel="stylesheet" href="styles/temples-large.css">
   <script src="scripts/temples.js" defer></script>
@@ -16,7 +19,9 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="temples.html" aria-label="Temple Album home">Temple <span>Album</span></a>
+      <a class="brand" href="temples.html" aria-label="Temple Album home">
+        Temple <span>Album</span>
+      </a>
 
       <button class="menu-toggle" type="button"
         aria-label="Open navigation menu"
@@ -42,9 +47,9 @@
       <p class="intro">A collection of beautiful temples from around the world.</p>
     </div>
 
-    <section class="temple-grid" aria-label="Temple photographs.">
+    <section class="temple-grid" aria-label="Temple photographs">
       <figure class="temple-card" data-year="1893" data-size="large">
-        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" width="900" height="600" loading="lazy">
+        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" loading="lazy">
         <figcaption>
           <span class="temple-name">Salt Lake Temple</span>
           <span class="temple-place">Salt Lake City, Utah</span>
@@ -52,7 +57,7 @@
       </figure>
 
       <figure class="temple-card" data-year="2000" data-size="small">
-        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" width="900" height="600" loading="lazy">
+        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
         <figcaption>
           <span class="temple-name">Temple of Christ</span>
           <span class="temple-place">Temple Album</span>
@@ -60,7 +65,7 @@
       </figure>
 
       <figure class="temple-card" data-year="2001" data-size="large">
-        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" width="900" height="600" loading="lazy">
+        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
         <figcaption>
           <span class="temple-name">Temple of Jesus</span>
           <span class="temple-place">Temple Album</span>
@@ -68,7 +73,7 @@
       </figure>
 
       <figure class="temple-card" data-year="1893" data-size="large">
-        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" width="900" height="600" loading="lazy">
+        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" loading="lazy">
         <figcaption>
           <span class="temple-name">Salt Lake Temple</span>
           <span class="temple-place">Salt Lake City, Utah</span>
@@ -76,7 +81,7 @@
       </figure>
 
       <figure class="temple-card" data-year="2000" data-size="small">
-        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" width="900" height="600" loading="lazy">
+        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
         <figcaption>
           <span class="temple-name">Temple of Christ</span>
           <span class="temple-place">Temple Album</span>
@@ -84,7 +89,7 @@
       </figure>
 
       <figure class="temple-card" data-year="2001" data-size="large">
-        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" width="900" height="600" loading="lazy">
+        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
         <figcaption>
           <span class="temple-name">Temple of Jesus</span>
           <span class="temple-place">Temple Album</span>
@@ -92,7 +97,7 @@
       </figure>
 
       <figure class="temple-card" data-year="1893" data-size="large">
-        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" width="900" height="600" loading="lazy">
+        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" loading="lazy">
         <figcaption>
           <span class="temple-name">Salt Lake Temple</span>
           <span class="temple-place">Salt Lake City, Utah</span>
@@ -100,7 +105,7 @@
       </figure>
 
       <figure class="temple-card" data-year="2000" data-size="small">
-        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" width="900" height="600" loading="lazy">
+        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
         <figcaption>
           <span class="temple-name">Temple of Christ</span>
           <span class="temple-place">Temple Album</span>
@@ -108,7 +113,7 @@
       </figure>
 
       <figure class="temple-card" data-year="2001" data-size="large">
-        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" width="900" height="600" loading="lazy">
+        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
         <figcaption>
           <span class="temple-name">Temple of Jesus</span>
           <span class="temple-place">Temple Album</span>
@@ -118,8 +123,13 @@
   </main>
 
   <footer class="site-footer">
-    <p class="copyright">Copyright &copy; <span id="current-year"></span> <strong>Dahline</strong> | Uganda</p>
-    <p class="last-modified">Last modified: <time id="last-modified"></time></p>
+    <p class="copyright">
+      Copyright &copy; <span id="current-year"></span>
+      <strong>Dahline Kimbugwe</strong> | Uganda
+    </p>
+    <p class="last-modified">
+      Last modified: <time id="last-modified"></time>
+    </p>
     <p class="byu-credit">Brigham Young University-Idaho | All rights reserved</p>
   </footer>
 </body>
