@@ -1,136 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Album | WDD 131</title>
-  <meta name="description" content="Explore a responsive album of sacred temples worldwide, created by Dahline Kimbugwe for WDD 131.">
-  <meta name="author" content="Dahline Kimbugwe">
-  <meta name="theme-color" content="#102a43">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css">
-  <script src="scripts/temples.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Temple Album</title>
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals - Temple Album assignment showcasing responsive web design, a hamburger navigation menu, CSS grid layouts, and dynamic JavaScript features.">
+    <meta name="author" content="Dahline Kimbugwe">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <!-- JavaScript -->
+    <script src="scripts/temples.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="temples.html" aria-label="Temple Album home">
-        Temple <span>Album</span>
-      </a>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle Navigation Menu"></button>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <button class="menu-toggle" type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="primary-navigation">
-        <span class="menu-icon" aria-hidden="true"></span>
-      </button>
+    <main>
+        <h2>Welcome to the Temple Gallery</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
+                <figcaption>Temple of Christ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
+                <figcaption>Temple of Jesus</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
+                <figcaption>Temple of Christ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
+                <figcaption>Temple of Jesus</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
+                <figcaption>Temple of Christ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
+                <figcaption>Temple of Jesus</figcaption>
+            </figure>
+        </div>
+    </main>
 
-      <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
-        <a class="nav-link is-active" href="#all" data-filter="all" aria-current="page">Home</a>
-        <a class="nav-link" href="#old" data-filter="old">Old</a>
-        <a class="nav-link" href="#new" data-filter="new">New</a>
-        <a class="nav-link" href="#large" data-filter="large">Large</a>
-        <a class="nav-link" href="#small" data-filter="small">Small</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="page-heading">
-      <p class="eyebrow">Places of peace and purpose</p>
-      <h1>Temple Album</h1>
-      <p class="intro">A collection of beautiful temples from around the world.</p>
-    </div>
-
-    <section class="temple-grid" aria-label="Temple photographs">
-      <figure class="temple-card" data-year="1893" data-size="large">
-        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Salt Lake Temple</span>
-          <span class="temple-place">Salt Lake City, Utah</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="2000" data-size="small">
-        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Temple of Christ</span>
-          <span class="temple-place">Temple Album</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="2001" data-size="large">
-        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Temple of Jesus</span>
-          <span class="temple-place">Temple Album</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="1893" data-size="large">
-        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Salt Lake Temple</span>
-          <span class="temple-place">Salt Lake City, Utah</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="2000" data-size="small">
-        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Temple of Christ</span>
-          <span class="temple-place">Temple Album</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="2001" data-size="large">
-        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Temple of Jesus</span>
-          <span class="temple-place">Temple Album</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="1893" data-size="large">
-        <img src="images/salt-lake.jpg" alt="Salt Lake Temple in Salt Lake City" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Salt Lake Temple</span>
-          <span class="temple-place">Salt Lake City, Utah</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="2000" data-size="small">
-        <img src="images/temple-of-christ.jfif" alt="Temple of Christ" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Temple of Christ</span>
-          <span class="temple-place">Temple Album</span>
-        </figcaption>
-      </figure>
-
-      <figure class="temple-card" data-year="2001" data-size="large">
-        <img src="images/temple-of-jesus.jpg" alt="Temple of Jesus" loading="lazy">
-        <figcaption>
-          <span class="temple-name">Temple of Jesus</span>
-          <span class="temple-place">Temple Album</span>
-        </figcaption>
-      </figure>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p class="copyright">
-      Copyright &copy; <span id="current-year"></span>
-      <strong>Dahline Kimbugwe</strong> | Uganda
-    </p>
-    <p class="last-modified">
-      Last modified: <time id="last-modified"></time>
-    </p>
-    <p class="byu-credit">Brigham Young University-Idaho | All rights reserved</p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Dahline Kimbugwe | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

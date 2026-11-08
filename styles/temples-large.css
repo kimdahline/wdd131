@@ -1,39 +1,33 @@
-@media (min-width: 700px) {
-  .header-inner {
-    flex-wrap: nowrap;
-  }
+@media screen and (min-width: 768px) {
+    /* Hide Hamburger Button on Desktop */
+    #menu {
+        display: none;
+    }
 
-  .menu-toggle {
-    display: none;
-  }
+    /* Force Nav to Always Display Horizontally on Desktop */
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+    }
 
-  .primary-nav,
-  .primary-nav.is-open {
-    flex: 0 1 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0;
-  }
+    nav ul {
+        flex-direction: row; /* Horizontal inline layout */
+    }
 
-  .primary-nav a {
-    padding: 0.62rem 0.9rem;
-  }
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
 
-  main {
-    padding-top: 3.5rem;
-  }
+    /* Expand Main Layout and CSS Grid Columns for Larger Screens */
+    main {
+        max-width: 1100px;
+    }
 
-  .temple-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 1020px) {
-  .temple-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.7rem;
-  }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns on desktop */
+    }
 }
