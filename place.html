@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Uganda, including its location, climate, and local highlights.">
+    <meta name="author" content="Dahline Kimbugwe">
+    <title>Uganda | Country Page</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Uganda</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img
+                src="images/uganda-beauty.webp"
+                alt="Landscape in Uganda"
+            >
+
+            <section class="information" aria-labelledby="data-heading">
+                <h2 id="data-heading">Data</h2>
+                <p>Area: 241,550 sq km</p>
+                <p>Population: 52.8 million people</p>
+                <p>Capital: Kampala</p>
+                <p>Languages: English, Swahili, Luganda</p>
+                <p>Currency: Ugandan shilling</p>
+                <p>Time zone: EAT (UTC+3)</p>
+                <p>Calling code: +256</p>
+                <p>Internet TLD: .ug</p>
+            </section>
+
+            <section class="weather" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">
+                    Weather
+                    <img
+                        class="weather-icon"
+                        src="images/weather.svg"
+                        alt=""
+                        aria-hidden="true"
+                    >
+                </h2>
+                <p>Temperature: <span id="temperature">10</span>&deg;C</p>
+                <p>Conditions: Partly cloudy</p>
+                <p>Wind: <span id="windspeed">5</span> km/h</p>
+                <p>Wind chill: <span id="windchill">N/A</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Dahline Kimbugwe, Uganda</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
