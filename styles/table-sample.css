@@ -1,0 +1,49 @@
+body {
+  padding: 5%;
+}
+
+table {
+  width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+table caption {
+  caption-side: bottom;
+  font-size: smaller;
+  padding: 0.2rem;
+}
+
+table th,
+table td {
+  padding: 0.5em 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: normal; /* Changed from 'pre' to prevent unexpected line wrapping issues */
+}
+
+table thead th,
+table tbody td {
+  text-align: center;
+}
+
+table thead {
+  color: #fff;
+  background: #000;
+}
+
+table thead th {
+  padding: 1rem;
+  font-size: larger;
+}
+
+table thead tr:nth-last-child(1) {
+  background-color: #333;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.blank {
+  background-color: #000;
+}
