@@ -1,0 +1,163 @@
+:root {
+  --color-ink: #172b3a;
+  --color-header: #123047;
+  --color-accent: #f2c14e;
+  --color-page: #f4f6f8;
+  --color-card: #ffffff;
+  --color-border: #c9d2d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-header);
+  color: #ffffff;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.6rem;
+}
+
+#menu {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid #ffffff;
+  border-radius: 0.35rem;
+  background-color: var(--color-header);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+  font-size: 1.5rem;
+}
+
+#menu[aria-expanded="true"]::before {
+  content: "✕";
+}
+
+#menu:focus-visible,
+nav a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+nav {
+  display: none;
+  grid-column: 1 / -1;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--color-accent);
+  color: #172b3a;
+}
+
+main {
+  width: min(100% - 2rem, 1200px);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+main h2 {
+  margin: 0 0 1rem;
+  color: var(--color-header);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.temple-card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-card);
+  box-shadow: 0 2px 6px rgb(23 43 58 / 12%);
+}
+
+.temple-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  background-color: #e4e9ed;
+}
+
+.temple-card figcaption {
+  padding: 0.8rem 1rem 1rem;
+}
+
+.temple-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-header);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.temple-card p {
+  margin: 0.25rem 0;
+}
+
+.label {
+  font-weight: 700;
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--color-header);
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
