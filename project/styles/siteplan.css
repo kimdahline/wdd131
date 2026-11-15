@@ -1,0 +1,266 @@
+:root {
+  --color-navy: #17324d;
+  --color-cream: #f6f1e7;
+  --color-gold: #8a5b13;
+  --color-ink: #202a29;
+  --color-white: #ffffff;
+  --color-line: #c9c1b3;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+header {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: 48rem;
+  text-align: left;
+}
+
+.brand-logo,
+.site-logo {
+  border-radius: 0.3rem;
+  display: block;
+  height: auto;
+  max-width: 32vw;
+  width: 8rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+header p {
+  margin: 0.65rem auto 0;
+  max-width: 44rem;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 66rem;
+  padding: 1.5rem 1rem 3rem;
+}
+
+section {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 0.55rem;
+  margin: 1.25rem 0;
+  padding: 1.4rem;
+}
+
+h2 {
+  border-bottom: 3px solid var(--color-gold);
+  color: var(--color-navy);
+  font-size: 1.55rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.45rem;
+}
+
+h3 {
+  color: var(--color-navy);
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+p {
+  margin: 0.5rem 0 0.9rem;
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.notice {
+  background-color: var(--color-cream);
+  border-left: 5px solid var(--color-gold);
+  color: var(--color-ink);
+  margin: 1rem auto 0;
+  max-width: 56rem;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.identity {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.75rem 0;
+}
+
+.swatches {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin: 1rem 0;
+}
+
+.swatch {
+  border: 1px solid var(--color-line);
+  border-radius: 0.45rem;
+  overflow: hidden;
+}
+
+.swatch-color {
+  min-height: 3.5rem;
+}
+
+.swatch-navy {
+  background-color: var(--color-navy);
+}
+
+.swatch-cream {
+  background-color: var(--color-cream);
+}
+
+.swatch-gold {
+  background-color: var(--color-gold);
+}
+
+.swatch p {
+  margin: 0;
+  padding: 0.7rem;
+}
+
+.sample-heading {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+}
+
+.sample-body {
+  font-family: var(--font-body);
+}
+
+.wireframe-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.wireframe {
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-line);
+  border-radius: 0.45rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+.wireframe figcaption {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.diagram {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-navy);
+  color: var(--color-ink);
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.55rem;
+}
+
+.box {
+  align-items: center;
+  background-color: var(--color-cream);
+  border: 1px dashed var(--color-gold);
+  display: flex;
+  justify-content: center;
+  min-height: 2.7rem;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.mobile-hero {
+  min-height: 5.5rem;
+}
+
+.wide-wireframe {
+  margin: 0 auto;
+  max-width: 35rem;
+}
+
+.wide-nav {
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+}
+
+.wide-hero {
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.wide-hero .box {
+  min-height: 6rem;
+}
+
+.wide-cards {
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+footer {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  main {
+    padding-top: 2rem;
+  }
+
+  .wireframe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
