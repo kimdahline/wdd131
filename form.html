@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form | WDD 131</title>
+    <meta name="description" content="Submit a product review including rating, installation date, useful features, and feedback.">
+    <meta name="author" content="Dahline Kimbugwe">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="wdd">
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="productName">Product Name <span class="required">*</span></label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <!-- Remaining options populated dynamically via form.js -->
+                </select>
+            </div>
+
+            <!-- Overall Rating -->
+            <fieldset class="form-group">
+                <legend>Overall Rating <span class="required">*</span></legend>
+                <div class="rating-group">
+                    <label for="rating1">
+                        <span>&star;</span>
+                        <input type="radio" id="rating1" name="rating" value="1" required>
+                    </label>
+                    <label for="rating2">
+                        <span>&star;&star;</span>
+                        <input type="radio" id="rating2" name="rating" value="2" required>
+                    </label>
+                    <label for="rating3">
+                        <span>&star;&star;&star;</span>
+                        <input type="radio" id="rating3" name="rating" value="3" required>
+                    </label>
+                    <label for="rating4">
+                        <span>&star;&star;&star;&star;</span>
+                        <input type="radio" id="rating4" name="rating" value="4" required>
+                    </label>
+                    <label for="rating5">
+                        <span>&star;&star;&star;&star;&star;</span>
+                        <input type="radio" id="rating5" name="rating" value="5" required>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div class="form-group">
+                <label for="installDate">Date of Installation <span class="required">*</span></label>
+                <input type="date" id="installDate" name="installDate" required>
+            </div>
+
+            <!-- Useful Features -->
+            <fieldset class="form-group">
+                <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
+                <div class="checkbox-group">
+                    <label for="featureDurability">
+                        <input type="checkbox" id="featureDurability" name="features" value="durability"> Durability
+                    </label>
+                    <label for="featureEase">
+                        <input type="checkbox" id="featureEase" name="features" value="ease-of-use"> Ease of Use
+                    </label>
+                    <label for="featurePerformance">
+                        <input type="checkbox" id="featurePerformance" name="features" value="performance"> Performance
+                    </label>
+                    <label for="featureDesign">
+                        <input type="checkbox" id="featureDesign" name="features" value="design"> Design
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+            <div class="form-group">
+                <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+            </div>
+
+            <!-- User Name -->
+            <div class="form-group">
+                <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <!-- Form Submission Button -->
+            <div class="form-group">
+                <input type="submit" value="Post Review">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Dahline Kimbugwe | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

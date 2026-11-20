@@ -1,0 +1,24 @@
+@media screen and (min-width: 640px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        max-width: 680px;
+        margin: 2.25rem auto;
+    }
+
+    .wdd {
+        padding: 2.25rem;
+    }
+
+    .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem 1.25rem;
+    }
+
+    .rating-group span {
+        font-size: 1.3rem;
+    }
+}
