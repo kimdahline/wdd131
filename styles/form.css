@@ -1,159 +1,19 @@
-:root {
-    --primary-color: #1f4e5f;
-    --primary-dark: #163844;
-    --secondary-color: #ffffff;
-    --accent-color: #f2f5f7;
-    --border-color: #cbd5e1;
-    --text-color: #1e293b;
-    --muted-text: #475569;
-    --required-color: #b91c1c;
-    --heading-font: Arial, Helvetica, sans-serif;
-    --body-font: Arial, Helvetica, sans-serif;
-    --font-size: 16px;
-}
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    font-size: var(--font-size);
-    line-height: 1.5;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header & Footer */
-header, footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1.25rem 1rem;
-    width: 100%;
-}
-
-header h1 {
-    font-family: var(--heading-font);
-    font-size: 1.75rem;
-    letter-spacing: 0.5px;
-    overflow-wrap: break-word;
-}
-
-footer {
-    margin-top: auto;
-    font-size: 0.9rem;
-}
-
-footer p + p {
-    margin-top: 0.35rem;
-    color: #e2e8f0;
-}
-
-/* Main Container */
-main {
-    width: 100%;
-    max-width: 600px;
-    margin: 1.5rem auto;
-    padding: 0 1rem;
-}
-
-/* Form Card */
-.wdd {
-    background-color: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    width: 100%;
-    max-width: 100%;
-}
-
-.form-group {
-    margin-bottom: 1.35rem;
-    min-width: 0;
-}
-
-.wdd label,
-.wdd legend {
-    display: block;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 0.45rem;
-    overflow-wrap: break-word;
-}
-
-.required {
-    color: var(--required-color);
-}
-
-.optional {
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--muted-text);
-}
-
-/* Text, Date, Select & Textarea Inputs */
-.wdd select,
-.wdd input[type="date"],
-.wdd input[type="text"],
-.wdd textarea {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    padding: 0.7rem 0.75rem;
-    font-family: inherit;
-    font-size: 1rem;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    min-height: 44px;
-}
-
-.wdd select:focus,
-.wdd input:focus,
-.wdd textarea:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 1px;
-    border-color: var(--primary-color);
-}
-
-/* Fieldsets (Rating & Features) */
+/* Fix fieldset shrinking on narrow mobile screens */
 .wdd fieldset {
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    padding: 0.85rem 0.85rem;
+    padding: 0.85rem 0.75rem;
     min-width: 0;
+    width: 100%;
     max-width: 100%;
 }
 
-.wdd legend {
-    padding: 0 0.4rem;
-    margin-bottom: 0;
-}
-
-.wdd legend em {
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--muted-text);
-}
-
-/* Overall Rating Stars */
+/* Keep the 5 rating options fitting cleanly inside mobile width */
 .rating-group {
     display: flex;
     justify-content: space-between;
-    gap: 0.25rem;
+    align-items: stretch;
+    gap: 0.2rem;
     padding-top: 0.4rem;
     width: 100%;
     min-width: 0;
@@ -163,128 +23,32 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex: 1 1 0;
     min-width: 0;
     margin-bottom: 0;
-    padding: 0.5rem 0.1rem;
+    padding: 0.45rem 0.05rem;
     border: 1px solid transparent;
     border-radius: 6px;
     cursor: pointer;
     min-height: 48px;
 }
 
-.rating-group label:hover {
-    background-color: var(--accent-color);
-    border-color: var(--border-color);
-}
-
 .rating-group span {
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: var(--primary-color);
     margin-bottom: 0.35rem;
-    letter-spacing: 0;
-    line-height: 1.2;
-    max-width: 100%;
-    overflow-wrap: anywhere;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
-.rating-group input[type="radio"] {
-    width: 1.15rem;
-    height: 1.15rem;
-    accent-color: var(--primary-color);
-    cursor: pointer;
-}
-
-/* Useful Features Checkboxes */
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-top: 0.4rem;
-    min-width: 0;
-}
-
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    font-weight: 400;
-    color: var(--text-color);
-    margin-bottom: 0;
-    padding: 0.35rem 0.25rem;
-    cursor: pointer;
-    min-height: 44px;
-    min-width: 0;
-}
-
-.checkbox-group input[type="checkbox"] {
-    flex-shrink: 0;
-    width: 1.2rem;
-    height: 1.2rem;
-    accent-color: var(--primary-color);
-    cursor: pointer;
-}
-
-/* Submit Button */
-.wdd input[type="submit"] {
+/* Prevent iOS Safari date input from looking squished */
+.wdd input[type="date"] {
+    display: block;
     width: 100%;
     max-width: 100%;
-    padding: 0.85rem 1.25rem;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    min-height: 48px;
-    transition: background-color 0.2s ease;
-}
-
-.wdd input[type="submit"]:hover {
-    background-color: var(--primary-dark);
-}
-
-/* Confirmation Page (review.html) */
-.confirmation-card {
-    background-color: var(--secondary-color);
-    padding: 2rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    text-align: center;
-    max-width: 100%;
-}
-
-.confirmation-card h2 {
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-}
-
-.confirmation-card p {
-    margin-bottom: 1rem;
-}
-
-.counter-display {
-    background-color: var(--accent-color);
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    font-size: 1.05rem;
-}
-
-.confirmation-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.7rem 1.25rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 6px;
-}
-
-.confirmation-card a:hover {
-    background-color: var(--primary-dark);
+    min-width: 0;
+    -webkit-appearance: none;
+    appearance: none;
 }
