@@ -22,7 +22,12 @@
         gap: 0.5rem;
     }
 
+    .rating-group label {
+        padding: 0.5rem 0.25rem;
+    }
+
     .rating-group span {
         font-size: 1.3rem;
+        letter-spacing: 1px;
     }
 }
